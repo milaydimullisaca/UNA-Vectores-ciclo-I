@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n,s;
+    cin>>n;
+    int vector[n];
+    
+    for(int i=0;i<n;i++){
+        vector[i]=i+1;
+    }
+    for(int i=0;i<n;i++){
+        
+    cout <<vector[i]<<"+";
+    s=s+vector[i];
+
+}
+cout<<"="<<s;
+    return 0;
+}
