@@ -1,15 +1,21 @@
 #include <iostream>
 using namespace std;
+
 int main() {
-    int n,s,media;
-    cin>>n;
-    int num[10]={10,20,30,40,50,60,70,8'0,90,100};
-    for(int i=0;i<n;i++){
-       cout<<num[i]<<" ";
-        s=s+num[i];}
-        
-        media=s/n;
-        
-       cout<<endl<<"la media es"<<media;
-      return 0;
+    int num = 5;  // Tamaño del arreglo
+    float arreglo[num]; // Declarar un arreglo de tamaño 5
+// Solicitar al usuario que introduzca 5 números
+    cout << "Introduzca los 5 numeros:" << endl;
+    for (int i = 0; i < num; i++) {
+        cout << "Número " << i + 1 << ": ";
+        cin >> arreglo[i];  // Guardar el número en el arreglo
+    }
+
+    // Mostrar los valores del arreglo
+    cout << "\nLos valores introducidos son:" << endl;
+    for (int i = 0; i < num; i++) {
+        cout << "Valor " << i + 1 << ": " << arreglo[i] << endl;
+    }
+
+    return 0;  // Finalizar el programa
 }
