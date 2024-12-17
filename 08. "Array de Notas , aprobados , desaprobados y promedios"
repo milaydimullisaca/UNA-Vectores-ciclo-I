@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N; // Número de notas
+    cout << "Ingrese la cantidad de notas: ";
+    cin >> N;
+
+    float notas[N]; // Arreglo para almacenar las notas
+    float sumaapro = 0, sumades= 0;
+    int cantidadapro = 0, cantidaddes = 0;
+    
+    cout << "Ingrese las notas:" << endl;
+    for (int i = 0; i < N; i++) {
+        cout << "Nota " << i + 1 << ": ";
+        cin >> notas[i];
+
+        if (notas[i] >= 10.5) { // Clasificar como aprobada
+            sumaapro += notas[i];
+            cantidadapro++;
+        } else { // Clasificar como desaprobada
+            sumades+= notas[i];
+            cantidaddes++;
+        }
+    }
+
+    // Calcular promedios
+    float promedioapro = (cantidadapro> 0) ? sumaapro / cantidadapro : 0;
+    float promediodes = (cantidaddes> 0) ? sumades/ cantidaddes : 0;
+
+    // Mostrar resultados
+    cout << "Cantidad de aprobados: " << cantidadapro << endl;
+    cout << "Promedio de aprobados: " << promedioapro<< endl;
+    cout << "Cantidad de desaprobados: " << cantidaddes << endl;
+    cout << "Promedio de desaprobados: " << promediodes << endl;
+
+    return 0;
+}
